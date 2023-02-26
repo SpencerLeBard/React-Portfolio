@@ -10,6 +10,7 @@ root.render(
   <React.StrictMode>
   <Header></Header>
     <App />
+    {/* footer? */}
   </React.StrictMode>
 );
 
