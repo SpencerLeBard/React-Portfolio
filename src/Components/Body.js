@@ -1,17 +1,14 @@
 import React from 'react'
-
+import './Body.css';
 class Body extends React.Component {
-  render() {
-    return (
-      <div className="Body">
-        <div class="container">
+render() {
+  return (
+  <div className="Body">
+  <div class="container">
   <header class="blog-header lh-1 py-3">
     <div class="row flex-nowrap justify-content-between align-items-center">
-      <div class="col-4 pt-1">
-        <a class="link-secondary" href="www.google.com">Subscribe</a>
-      </div>
       <div class="col-4 text-center">
-        <a class="blog-header-logo text-dark" href="www.google.com">Large</a>
+        <a class="blog-header-logo text-dark" href="www.google.com">Spencer's Blog Title</a>
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
         <a class="link-secondary" href="www.google.com" aria-label="Search">
@@ -207,7 +204,7 @@ class Body extends React.Component {
     </div>
 
     <div class="col-md-4">
-      <div class="position-sticky">
+      <div className="sticky-top">
         <div class="p-4 mb-3 bg-light rounded">
           <h4 class="fst-italic">About</h4>
           <p class="mb-0">Customize this section to tell your visitors a little bit about your publication, writers, content, or something else entirely. Totally up to you.</p>
@@ -242,10 +239,8 @@ class Body extends React.Component {
       </div>
     </div>
   </div>
-
 </main>
-
-      </div>
+</div>
     )
   }
 }
