@@ -1,14 +1,18 @@
 import React from 'react'
 import './Body.css';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import FirstBlog from './FirstBlog.js';  
+
 class Body extends React.Component {
 render() {
   return (
-  <div className="Body">
+    <Router>
+    <div className="Body">
   <div class="container">
   <header class="blog-header lh-1 py-3">
     <div class="row flex-nowrap justify-content-between align-items-center">
       <div class="col-4 text-center">
-        <a class="blog-header-logo text-dark" href="www.google.com">Spencer's Blog Title</a>
+        <a class="blog-header-logo text-dark" href="www.google.com">Spencer's Blog</a>
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
         <a class="link-secondary" href="www.google.com" aria-label="Search">
@@ -40,9 +44,9 @@ render() {
 <main class="container">
   <div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
     <div class="col-md-6 px-0">
-      <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
+      <h1 class="display-4 fst-italic">First Blog Title</h1>
       <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
-      <p class="lead mb-0"><a href="www.google.com" class="text-white fw-bold">Continue reading...</a></p>
+    <p class="lead mb-0"><Link to="/FirstBlog">Continue reading...</Link></p>
     </div>
   </div>
 
@@ -241,8 +245,11 @@ render() {
   </div>
 </main>
 </div>
+    {/* <Route path="/FirstBlog" exact component={FirstBlog} /> */}
+    </Router>
     )
   }
 }
+
 
 export default Body 
