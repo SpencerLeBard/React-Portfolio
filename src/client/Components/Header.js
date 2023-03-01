@@ -1,33 +1,42 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import React from 'react'
 
 function Header() {
   return (
-    <Navbar bg="light" expand="lg" className="sticky-top">
-      <Container>
-        <Navbar.Brand href="#home">Spencer LeBard's Portfolio and Blog</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+<div className="Header">
+<div class="container">
+  <header class="blog-header lh-1 py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 text-center">
+        <a class="blog-header-logo text-dark" href="www.google.com">Spencer's Blog</a>
+      </div>
+      <div class="col-4 d-flex justify-content-end align-items-center">
+        <a class="link-secondary" href="www.google.com" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg>
+        </a>
+        <a class="btn btn-sm btn-outline-secondary" href="www.google.com">Sign up</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between">
+      <a class="p-2 link-secondary" href="www.google.com">World</a>
+      <a class="p-2 link-secondary" href="www.google.com">U.S.</a>
+      <a class="p-2 link-secondary" href="www.google.com">Technology</a>
+      <a class="p-2 link-secondary" href="www.google.com">Design</a>
+      <a class="p-2 link-secondary" href="www.google.com">Culture</a>
+      <a class="p-2 link-secondary" href="www.google.com">Business</a>
+      <a class="p-2 link-secondary" href="www.google.com">Politics</a>
+      <a class="p-2 link-secondary" href="www.google.com">Opinion</a>
+      <a class="p-2 link-secondary" href="www.google.com">Science</a>
+      <a class="p-2 link-secondary" href="www.google.com">Health</a>
+      <a class="p-2 link-secondary" href="www.google.com">Style</a>
+      <a class="p-2 link-secondary" href="www.google.com">Travel</a>
+    </nav>
+  </div>
+</div>
+
+ </div>
   );
 }
 

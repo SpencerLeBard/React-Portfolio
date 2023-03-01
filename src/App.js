@@ -1,16 +1,20 @@
 import './App.css';
-import Header from "./client/Components/Header";
-import Footer from "./client/Components/Footer"
-import Body from './client/Components/Body.js'
+import Nav from "./client/components/Nav";
+import Footer from "./client/components/Footer"
+import Body from './client/components/Body.js'
+import FirstBlog from './client/pages/FirstBlog' 
+import { Routes, Route, Outlet, Link, Switch } from "react-router-dom";
 
 function App() {
   return (
 <div className="App">
-  <Header></Header>
-    <Body></Body>
-  <Footer></Footer>
+    <Routes>
+    <Route path="/" element={ <Body/> } />
+    <Route path="FirstBlog" element={ <FirstBlog/> } />
+    </Routes>
 </div>
   );
 }
+
 
 export default App;
