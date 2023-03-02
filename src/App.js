@@ -1,17 +1,21 @@
 import './App.css';
-import Nav from "./client/components/Nav";
-import Footer from "./client/components/Footer"
 import Body from './client/components/Body.js'
 import FirstBlog from './client/pages/FirstBlog' 
-import { Routes, Route, Outlet, Link, Switch } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
+import Navigation from "./client/components/Navigation";
+import Footer from './client/components/Footer'
+import Portfolio from "./client/pages/Portfolio";
 
 function App() {
   return (
 <div className="App">
+    <Navigation />
     <Routes>
     <Route path="/" element={ <Body/> } />
     <Route path="FirstBlog" element={ <FirstBlog/> } />
+    <Route path="Portfolio" element={ <Portfolio/> } />
     </Routes>
+    <Footer />
 </div>
   );
 }
