@@ -1,34 +1,20 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import React from 'react'
 import { Link } from "react-router-dom";
 
 function Navigation() {
   return (
-    <Navbar bg="light" expand="lg" className="sticky-top">
-      <Container>
-        <Navbar.Brand href="#home">Spencer LeBard's Portfolio and Blog</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Blog Home</Nav.Link>
-            <Link to="/Portfolio">Portfolio</Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+<div className="Navigation">
+    <div className="container">
+      <div className="row">
+        <div className="col-3">
+            Spencer's Blog and Portfolio
+        </div>
+        <div className="col-4 ">
+        <Link to="/Portfolio">Portfolio</Link>
+        </div>
+      </div>
+    </div>
+  </div>
   );
 }
 
