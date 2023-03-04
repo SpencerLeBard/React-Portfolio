@@ -1,10 +1,10 @@
 import React from 'react'
-
+import './Portfolio.css'
 
 function Portfolio() {
   return (
-<div className="Portfolio">
-    <h1>Portfolio</h1>
+<div className="Portfolio text-3xl font-bold underline">
+    <h1 className="text-3xl font-bold underline" >Portfolio</h1>
  </div>
   );
 }
