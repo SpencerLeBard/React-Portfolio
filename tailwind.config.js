@@ -6,7 +6,11 @@ module.exports = {
     './components/**/*.{html,js}',
   ],
   theme: {
-    extend: {},
+    colors: {
+      'marble' : {
+        DEFAULT: '#f5f7f7'
+      } 
+    },
   },
   plugins: [
     'postcss-import' ,
