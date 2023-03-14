@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
 import { Link } from "react-router-dom";
+import Navigation from '../components/Navigation';
 class BlogHome extends React.Component {
 render() {
   return (
     <div className="BlogHome">
+    <Navigation />
 <main class="container">
   <div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
     <div class="col-md-6 px-0">
