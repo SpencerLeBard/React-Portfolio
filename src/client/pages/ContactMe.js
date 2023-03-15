@@ -1,11 +1,12 @@
 import React from 'react'
-import backgroundArt from '../Assets/abstract.jpg';
-import WhiteBlock from "../components/WhiteBlock";
+import backgroundArt from '../Assets/abstract.jpg'; 
+import WhiteBlockContactMe from '../components/WhiteBlockContactMe'
 
 
-function Home() {
+
+function ContactMe() {
   return (
-<div class="Home">
+<div class="ContactMe">
   <div className="relative">
       <img
         className="w-full max-h-screen w-screen bg-cover"
@@ -13,11 +14,11 @@ function Home() {
         alt="Background"
       />
     </div>
-      <WhiteBlock />
+      <WhiteBlockContactMe />
 </div>
   );
 }
 
 
 
-export default Home;
+export default ContactMe;

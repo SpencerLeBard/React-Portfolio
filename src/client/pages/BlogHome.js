@@ -13,7 +13,6 @@ render() {
       <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
       {/* ANCHOR I WORK ON THIS AREA */}
       <Link to="/FirstBlog">Continue Reading ...</Link>
-    </div>
   </div>
 
   <div class="row mb-2">
@@ -40,6 +39,7 @@ render() {
           <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
           <a href="www.google.com" class="stretched-link">Continue reading</a>
         </div>
+      </div>
         <div class="col-auto d-none d-lg-block">
           <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="www.google.com55595c"/><text x="50%" y="50%" fill="www.google.comeceeef" dy=".3em">Thumbnail</text></svg>
         </div>

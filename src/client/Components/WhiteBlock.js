@@ -16,7 +16,8 @@ function WhiteBlock() {
           <h1 className="text-black text-4xl font-bold font-mono">Portfolio</h1>
           <Link style={{textDecoration: 'none'}} to="/BlogHome">
           <h1 className="text-black text-4xl font-bold font-mono">Blog</h1></Link>
-          <h1 className="text-black text-4xl font-bold font-mono">Contact Me</h1>
+          <Link style={{textDecoration: 'none'}} to="/ContactMe">
+          <h1 className="text-black text-4xl font-bold font-mono">Contact Me</h1></Link>
           </div>
       </div>
       </div>
