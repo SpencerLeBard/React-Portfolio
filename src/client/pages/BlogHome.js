@@ -5,18 +5,19 @@ class BlogHome extends React.Component {
 render() {
   return (
     <div className="BlogHome">
-    <Navigation />
+<Navigation />
 <main class="container">
-  <div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
-    <div class="col-md-6 px-0">
+    {/* ANCHOR Main Box */}
+  <div class="p-4 p-5 mb-4 rounded text-bg-dark">
+    <div class="col-md-6 px-0 p-2">
       <h1 class="display-4 fst-italic">First Blog Title</h1>
       <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
-      {/* ANCHOR I WORK ON THIS AREA */}
+      {/* ANCHOR LINK TO FIRST BLOG */}
       <Link to="/FirstBlog">Continue Reading ...</Link>
   </div>
 
-  <div class="row mb-2">
-    <div class="col-md-6">
+  <div class="row">
+    <div class="col-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 text-primary">World</strong>
