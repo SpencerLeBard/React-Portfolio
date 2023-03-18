@@ -41,9 +41,6 @@ render() {
           <a href="www.google.com" class="stretched-link">Continue reading</a>
         </div>
       </div>
-        <div class="col-auto d-none d-lg-block">
-          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="www.google.com55595c"/><text x="50%" y="50%" fill="www.google.comeceeef" dy=".3em">Thumbnail</text></svg>
-        </div>
       </div>
     </div>  
   </div>
