@@ -13,7 +13,7 @@ function WhiteBlockContactMe() {
           <h1 className="text-black text-4xl font-bold font-mono">Spencer LeBard</h1>
           <h1 className="text-black text-4xl font-bold font-mono">Slebard@gmail.com</h1>
           <h1 className="text-black text-4xl font-bold font-mono">github.com/SpencerLeBard</h1>
-          <h1 className="text-black text-4xl font-bold font-mono">linkedin.com/in/spencerlebard/</h1>
+          <h1 className="text-black text-4xl font-bold font-mono">linkedin.com/in/spencerlebard</h1>
           </div>
       </div>
       </div>

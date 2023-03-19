@@ -11,7 +11,7 @@ function Navigation() {
             Spencer's Blog and Portfolio
         </div>
         <div className="col-4 decoration-black">
-        <Link style={{textDecoration: 'none'}} to="/BlogHome"> Blog Home </Link>
+        <Link style={{textDecoration: 'none'}} to="/BlogHome"> Blog Home </Link>w
         </div>
       </div>
     </div>
