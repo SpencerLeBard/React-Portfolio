@@ -1,50 +1,202 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
-import Navigation from '../components/Navigation';
+import Navigation from "../components/Navigation";
 class BlogHome extends React.Component {
-render() {
-  return (
-    <div className="BlogHome">
-<Navigation />
-<main class="container">
-    {/* ANCHOR Main Box */}
-  <div class="p-5 rounded text-bg-dark flex flex-col space-y-5 ">
-    <div class="col-12 p-2 border rounded">
-      <h1 class="display-4 fst-italic">First Blog Title</h1>
-      <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
-      {/* ANCHOR LINK TO FIRST BLOG */}
-      <Link to="/FirstBlog">Continue Reading ...</Link>
-  </div>
-
-    <div class="col-12">
-      <div class="row g-0 border rounded shadow-md h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-primary">Second Blog Post Tag</strong>
-          <h3 class="mb-0">Second Post</h3>
-          <div class="mb-1 text-muted">March 19, 2023</div>
-          <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-          <a href="www.google.com" class="stretched-link">Continue reading</a>
-        </div>
-        <div class="col-auto d-none d-lg-block">
-          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="www.google.com55595c"/><text x="50%" y="50%" fill="www.google.comeceeef" dy=".3em">Thumbnail</text></svg>
-        </div>
+  render() {
+    return (
+      <div className="BlogHome">
+        <Navigation />
+        <Link to="/FirstBlog">Continue Reading ...</Link>
+        <section className="dark:bg-gray-800 dark:text-gray-100">
+          <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
+            <a
+              rel="noopener noreferrer"
+              href="#"
+              className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-900"
+            >
+              <img
+                src="https://source.unsplash.com/random/480x360"
+                alt=""
+                className="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500"
+              />
+              <div className="p-6 space-y-2 lg:col-span-5">
+                <h3 className="text-2xl font-semibold sm:text-4xl group-hover:underline group-focus:underline">
+                  Noster tincidunt reprimique ad pro
+                </h3>
+                <span className="text-xs dark:text-gray-400">
+                  February 19, 2021
+                </span>
+                <p>
+                  Ei delenit sensibus liberavisse pri. Quod suscipit no nam. Est
+                  in graece fuisset, eos affert putent doctus id.
+                </p>
+              </div>
+            </a>
+            <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              <a
+                rel="noopener noreferrer"
+                href="#"
+                className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900"
+              >
+                <img
+                  role="presentation"
+                  className="object-cover w-full rounded h-44 dark:bg-gray-500"
+                  src="https://source.unsplash.com/random/480x360?1"
+                />
+                <div className="p-6 space-y-2">
+                  <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
+                    In usu laoreet repudiare legendos
+                  </h3>
+                  <span className="text-xs dark:text-gray-400">
+                    January 21, 2021
+                  </span>
+                  <p>
+                    Mei ex aliquid eleifend forensibus, quo ad dicta apeirian
+                    neglegentur, ex has tantas percipit perfecto. At per tempor
+                    albucius perfecto, ei probatus consulatu patrioque mea, ei
+                    vocent delicata indoctum pri.
+                  </p>
+                </div>
+              </a>
+              <a
+                rel="noopener noreferrer"
+                href="#"
+                className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900"
+              >
+                <img
+                  role="presentation"
+                  className="object-cover w-full rounded h-44 dark:bg-gray-500"
+                  src="https://source.unsplash.com/random/480x360?2"
+                />
+                <div className="p-6 space-y-2">
+                  <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
+                    In usu laoreet repudiare legendos
+                  </h3>
+                  <span className="text-xs dark:text-gray-400">
+                    January 22, 2021
+                  </span>
+                  <p>
+                    Mei ex aliquid eleifend forensibus, quo ad dicta apeirian
+                    neglegentur, ex has tantas percipit perfecto. At per tempor
+                    albucius perfecto, ei probatus consulatu patrioque mea, ei
+                    vocent delicata indoctum pri.
+                  </p>
+                </div>
+              </a>
+              <a
+                rel="noopener noreferrer"
+                href="#"
+                className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900"
+              >
+                <img
+                  role="presentation"
+                  className="object-cover w-full rounded h-44 dark:bg-gray-500"
+                  src="https://source.unsplash.com/random/480x360?3"
+                />
+                <div className="p-6 space-y-2">
+                  <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
+                    In usu laoreet repudiare legendos
+                  </h3>
+                  <span className="text-xs dark:text-gray-400">
+                    January 23, 2021
+                  </span>
+                  <p>
+                    Mei ex aliquid eleifend forensibus, quo ad dicta apeirian
+                    neglegentur, ex has tantas percipit perfecto. At per tempor
+                    albucius perfecto, ei probatus consulatu patrioque mea, ei
+                    vocent delicata indoctum pri.
+                  </p>
+                </div>
+              </a>
+              <a
+                rel="noopener noreferrer"
+                href="#"
+                className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900 hidden sm:block"
+              >
+                <img
+                  role="presentation"
+                  className="object-cover w-full rounded h-44 dark:bg-gray-500"
+                  src="https://source.unsplash.com/random/480x360?4"
+                />
+                <div className="p-6 space-y-2">
+                  <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
+                    In usu laoreet repudiare legendos
+                  </h3>
+                  <span className="text-xs dark:text-gray-400">
+                    January 24, 2021
+                  </span>
+                  <p>
+                    Mei ex aliquid eleifend forensibus, quo ad dicta apeirian
+                    neglegentur, ex has tantas percipit perfecto. At per tempor
+                    albucius perfecto, ei probatus consulatu patrioque mea, ei
+                    vocent delicata indoctum pri.
+                  </p>
+                </div>
+              </a>
+              <a
+                rel="noopener noreferrer"
+                href="#"
+                className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900 hidden sm:block"
+              >
+                <img
+                  role="presentation"
+                  className="object-cover w-full rounded h-44 dark:bg-gray-500"
+                  src="https://source.unsplash.com/random/480x360?5"
+                />
+                <div className="p-6 space-y-2">
+                  <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
+                    In usu laoreet repudiare legendos
+                  </h3>
+                  <span className="text-xs dark:text-gray-400">
+                    January 25, 2021
+                  </span>
+                  <p>
+                    Mei ex aliquid eleifend forensibus, quo ad dicta apeirian
+                    neglegentur, ex has tantas percipit perfecto. At per tempor
+                    albucius perfecto, ei probatus consulatu patrioque mea, ei
+                    vocent delicata indoctum pri.
+                  </p>
+                </div>
+              </a>
+              <a
+                rel="noopener noreferrer"
+                href="#"
+                className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900 hidden sm:block"
+              >
+                <img
+                  role="presentation"
+                  className="object-cover w-full rounded h-44 dark:bg-gray-500"
+                  src="https://source.unsplash.com/random/480x360?6"
+                />
+                <div className="p-6 space-y-2">
+                  <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
+                    In usu laoreet repudiare legendos
+                  </h3>
+                  <span className="text-xs dark:text-gray-400">
+                    January 26, 2021
+                  </span>
+                  <p>
+                    Mei ex aliquid eleifend forensibus, quo ad dicta apeirian
+                    neglegentur, ex has tantas percipit perfecto. At per tempor
+                    albucius perfecto, ei probatus consulatu patrioque mea, ei
+                    vocent delicata indoctum pri.
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div className="flex justify-center">
+              <button
+                type="button"
+                className="px-6 py-3 text-sm rounded-md hover:underline dark:bg-gray-900 dark:text-gray-400"
+              >
+                Load more posts...
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
-    </div>
-      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-success">Design</strong>
-          <h3 class="mb-0">Post title</h3>
-          <div class="mb-1 text-muted">Nov 11</div>
-          <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-          <a href="www.google.com" class="stretched-link">Continue reading</a>
-        </div>
-      </div>
-  </div>
-</main>
-</div>
-    )
+    );
   }
 }
 
-
-export default BlogHome 
+export default BlogHome;
