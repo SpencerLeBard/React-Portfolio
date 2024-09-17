@@ -3,22 +3,20 @@ import { Link } from "react-router-dom";
 
 function Navigation() {
   return (
-    <div className="Navigation  h-7 bg-marble">
-      <div className="container font-mono ">
-        <div className="row">
-          <div className="col-3">Spencer's Blog and Portfolio</div>
-          <div className="col-3 decoration-black">
-            <Link style={{ textDecoration: "none" }} to="/">
-              Home
-            </Link>
-          </div>
-          <div className="col-4 decoration-black">
-            <Link style={{ textDecoration: "none" }} to="/BlogHome">
-              Blog Home
-            </Link>
-          </div>
-        </div>
-      </div>
+    <div className="navbar bg-primary text-primary-content">
+      <a className="btn btn-ghost normal-case text-xl">
+        <Link
+          className="col-4"
+          style={{ textDecoration: "none" }}
+          to="/BlogHome"
+        >
+          Blog Home
+        </Link>
+        <Link className="col-8" style={{ textDecoration: "none" }} to="/">
+          Home
+        </Link>
+        Spencer LeBard's Blog and Portfolio
+      </a>
     </div>
   );
 }
