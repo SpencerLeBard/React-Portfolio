@@ -15,9 +15,11 @@ function WhiteBlock() {
             {/* TODO RIGHT side text */}
             <div className="absolute right-5 top-5">
               <h1 className="text-black text-6xl font-bold font-mono">Home</h1>
-              <h1 className="text-black text-6xl font-bold font-mono">
-                Portfolio
-              </h1>
+              <Link style={{ textDecoration: "none" }} to="/Portfolio">
+                <h1 className="text-black text-6xl font-bold font-mono">
+                  Portfolio
+                </h1>
+              </Link>
               <Link style={{ textDecoration: "none" }} to="/BlogHome">
                 <h1 className="text-black text-6xl font-bold font-mono">
                   Blog
