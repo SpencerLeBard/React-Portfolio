@@ -20,7 +20,7 @@ function WhiteBlock() {
                   Portfolio
                 </h1>
               </Link>
-              <Link style={{ textDecoration: "none" }} to="/BlogHome">
+              <Link style={{ textDecoration: "none" }} to="/Blogs">
                 <h1 className="text-black text-6xl font-bold font-mono">
                   Blog
                 </h1>
