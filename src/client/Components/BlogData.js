@@ -3,8 +3,8 @@ const blogData = [
     id: 1,
     title: "First Blog Post",
     date: "Sept 11, 2024",
-    author: "Mohammad",
-    content: "Allah Akbar.",
+    author: "Spencer LeBard",
+    content: "Hello World.",
   },
   {
     id: 2,

@@ -3,16 +3,32 @@ import React from "react";
 const Portfolio = () => {
   const projects = [
     {
-      title: "Project 1",
-      description: "A brief description of Project 1",
-      imageUrl: "your-image-url",
+      title: "PetPal",
+      description:
+        "Full-stack application that utilizes Humane Society's API data and helps connect homeless animals with people looking to rescue a cat or dog. Ability to save favorite animals and connect with adoption agency.",
+      imageUrl:
+        "https://raw.githubusercontent.com/SpencerLeBard/PetPal/dev/clientsrc/src/assets/Home.PNG",
     },
     {
-      title: "Project 2",
-      description: "A brief description of Project 2",
-      imageUrl: "your-image-url",
+      title: "Bartendr",
+      description:
+        "Live stream from your favorite bar, see who is working and who is drinking",
+      imageUrl:
+        "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/11/17/11/istock-89516603-medium.jpg",
     },
-    // Add more projects as needed
+    {
+      title: "Google",
+      description:
+        "Project Pidgeotto: Connect Salesforce to all Google's internal tools",
+      imageUrl: "https://pluspng.com/img-png/google-logo-png-open-2000.png",
+    },
+    {
+      title: "Fisher Investments",
+      description:
+        "Create and connect Salesforce to FI's internal tools and systems",
+      imageUrl:
+        "https://i.pinimg.com/originals/5e/33/c5/5e33c5a821960f5d467f1f51b40477fc.jpg",
+    },
   ];
 
   return (
