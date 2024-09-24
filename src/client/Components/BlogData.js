@@ -4,7 +4,9 @@ const blogData = [
     title: "First Blog Post",
     date: "Sept 11, 2024",
     author: "Spencer LeBard",
-    content: "Hello World.",
+    content: `Story about a client who 
+      cried wolf: consultant who did their best but left and client said 
+      consultants suck.`,
   },
   {
     id: 2,
