@@ -1,5 +1,5 @@
 const express = require("express");
-const mysql = require("mysql");
+const mysql = require("mysql2");
 const cors = require("cors");
 
 const app = express();
@@ -11,7 +11,7 @@ const db = mysql.createConnection({
   host: "localhost", // The host where your MySQL server is running
   user: "root", // Your MySQL username
   password: "spencer47", // Your MySQL password, leave blank if none
-  database: "blogDB", // The name of the database you created
+  database: "BlogDB", // The name of the database you created
 });
 
 // Connect to MySQL
