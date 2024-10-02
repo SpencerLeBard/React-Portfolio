@@ -14,7 +14,7 @@ function WhiteBlockContactMe() {
                 Spencer LeBard
               </h1>
               <h1 className="text-black text-4xl font-bold font-mono">
-                Slebard@gmail.com
+                slebard@gmail.com
               </h1>
               <h1 className="text-black text-4xl font-bold font-mono">
                 github.com/SpencerLeBard

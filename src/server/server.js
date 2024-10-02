@@ -1,36 +1,33 @@
 const express = require("express");
 const mysql = require("mysql2");
 const cors = require("cors");
-
 const app = express();
-app.use(cors());
-app.use(express.json()); // Middleware to parse JSON bodies
+const port = 5000;
+
+app.use(cors()); //Allow requests
+app.use(express.json());
 
 // MySQL connection setup
 const db = mysql.createConnection({
-  host: "localhost", // The host where your MySQL server is running
-  user: "root", // Your MySQL username
-  password: "spencer47", // Your MySQL password, leave blank if none
-  database: "BlogDB", // The name of the database you created
+  host: "localhost",
+  user: "root", //MySQL username
+  password: "spencer47",
+  database: "BlogDB",
 });
 
-// Connect to MySQL
-db.connect((err) => {
-  if (err) throw err;
-  console.log("MySQL Connected...");
-});
-
-// Route to get all blogs
-app.get("/blogs", (req, res) => {
+//Get all blogs in bloglist component
+app.get("/api/blogs", (req, res) => {
   const sql = "SELECT * FROM blogs";
   db.query(sql, (err, result) => {
-    if (err) throw err;
-    res.send(result); // Send the result as JSON
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+    res.json(result);
   });
 });
 
 // Route to get a single blog by ID
-app.get("/blogs/:id", (req, res) => {
+app.get("/api/blogs/:id", (req, res) => {
   const { id } = req.params;
   const sql = `SELECT * FROM blogs WHERE id = ${id}`;
   db.query(sql, (err, result) => {
@@ -40,6 +37,6 @@ app.get("/blogs/:id", (req, res) => {
 });
 
 // Start the server
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });

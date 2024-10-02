@@ -1,28 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
-import BlogData from "../components/BlogData";
 
 const BlogList = () => {
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    // Fetch blogs from the backend API
+    axios
+      .get("http://localhost:5000/api/blogs")
+      .then((response) => {
+        setBlogs(response.data); // Update state with the fetched blog data
+      })
+      .catch((error) => {
+        console.error("Error fetching blogs:", error); // Handle any errors
+      });
+  }, []); // Empty array ensures this effect runs only once on mount
+
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-4xl font-bold text-center mb-8">Blog Posts</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {BlogData.map((post) => (
-          <div
-            key={post.id}
-            className="bg-white shadow-md rounded-lg overflow-hidden p-4"
-          >
-            <h2 className="text-xl font-semibold">{post.title}</h2>
-            <p className="text-gray-600 text-base mb-4">{post.description}</p>
-            <Link
-              to={`/Blogs/${post.id}`}
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            >
-              Read More
+    <div>
+      <ul>
+        {blogs.map((blog) => (
+          <li key={blog.id}>
+            <Link to={`/blogs/${blog.id}`}>
+              <h2>{blog.title}</h2>
+              <p>{new Date(blog.date).toDateString()}</p>
+              <p>{blog.author}</p>
             </Link>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };
