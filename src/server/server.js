@@ -1,5 +1,5 @@
 const express = require("express");
-const mysql = require("mysql2");
+const mysql = require("mysql2"); //mysql wasnt working so updated to mysql2
 const cors = require("cors");
 const app = express();
 const port = 5000;
