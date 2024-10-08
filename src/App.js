@@ -5,6 +5,7 @@ import Home from "./client/pages/Home";
 import Portfolio from "./client/pages/Portfolio";
 import ContactMe from "./client/pages/ContactMe";
 import BlogDetail from "./client/components/BlogDetail";
+// import WhiteBlock from "./client/components/WhiteBlock";
 
 function App() {
   return (
