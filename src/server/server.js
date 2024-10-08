@@ -15,7 +15,7 @@ const db = mysql.createConnection({
   database: "BlogDB",
 });
 
-//Get all blogs in bloglist component
+//Get all blogs for bloglist component or postman
 app.get("/api/blogs", (req, res) => {
   const sql = "SELECT * FROM blogs";
   db.query(sql, (err, result) => {
@@ -32,7 +32,24 @@ app.get("/api/blogs/:id", (req, res) => {
   const sql = `SELECT * FROM blogs WHERE id = ${id}`;
   db.query(sql, (err, result) => {
     if (err) throw err;
-    res.send(result[0]); // Send the first result as JSON
+    res.send(result[0]);
+  });
+});
+
+// Route for creating a new blog post
+app.post("/api/blogs", (req, res) => {
+  const { title, date, author, content } = req.body;
+
+  // Insert new blog post into the database
+  const sql =
+    "INSERT INTO blogs (title, date, author, content) VALUES (?, ?, ?, ?)";
+  db.query(sql, [title, date, author, content], (err, result) => {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+    res
+      .status(201)
+      .json({ message: "Blog post added successfully!", id: result.insertId });
   });
 });
 
