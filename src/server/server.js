@@ -53,6 +53,25 @@ app.post("/api/blogs", (req, res) => {
   });
 });
 
+// Update (edit) an existing blog post (PUT request)
+app.put("/api/blogs/:id", (req, res) => {
+  const { id } = req.params;
+  const { title, date, author, content } = req.body;
+
+  // SQL query to update the blog post
+  const sql =
+    "UPDATE blogs SET title = ?, date = ?, author = ?, content = ? WHERE id = ?";
+  db.query(sql, [title, date, author, content, id], (err, result) => {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+    if (result.affectedRows === 0) {
+      return res.status(404).json({ error: "Blog post not found" });
+    }
+    res.json({ message: "Blog post updated successfully!" });
+  });
+});
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
