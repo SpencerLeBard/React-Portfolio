@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function WhiteBlock() {
+function Home() {
   return (
     <div className="white-block min-h-screen flex flex-col bg-gray-100">
       {/* HEADER SECTION */}
@@ -72,4 +72,4 @@ function WhiteBlock() {
   );
 }
 
-export default WhiteBlock;
+export default Home;
