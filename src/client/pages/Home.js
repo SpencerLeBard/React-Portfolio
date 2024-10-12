@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 function Home() {
   return (
     <div className="white-block min-h-screen flex flex-col bg-gray-100">
-      {/* HEADER SECTION */}
       <header className="bg-white shadow-md py-4">
         <div className="container mx-auto flex justify-between items-center">
           <h1 className="text-4xl font-bold font-mono text-black">
