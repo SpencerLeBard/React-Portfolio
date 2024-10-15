@@ -8,6 +8,7 @@ import BlogDetail from "./client/components/BlogDetail";
 
 function App() {
   return (
+    // <Router>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/portfolio" element={<Portfolio />} />
@@ -15,6 +16,7 @@ function App() {
       <Route path="/Blogs" element={<Blogs />} />
       <Route path="/Blogs/:id" element={<BlogDetail />} />
     </Routes>
+    // </Router>
   );
 }
 
