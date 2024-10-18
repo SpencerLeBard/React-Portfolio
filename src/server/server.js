@@ -10,7 +10,7 @@ app.use(express.json());
 // MySQL connection setup
 const db = mysql.createConnection({
   host: "localhost",
-  user: "root", //MySQL username
+  user: "root",
   password: "spencer47",
   database: "BlogDB",
 });
@@ -74,5 +74,5 @@ app.put("/api/blogs/:id", (req, res) => {
 
 // Start the server
 app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+  console.log(`Connection Successful:  Server running on port ${port} ... `);
 });
