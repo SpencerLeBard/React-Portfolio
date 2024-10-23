@@ -18,14 +18,23 @@ const BlogList = () => {
   }, []); // Empty array ensures this effect runs only once on mount
 
   return (
-    <div>
-      <ul>
+    <div className="flex flex-col items-center mt-6">
+      <ul className="w-full max-w-4xl">
         {blogs.map((blog) => (
-          <li key={blog.id}>
-            <Link to={`/blogs/${blog.id}`}>
-              <h2>{blog.title}</h2>
-              <p>{new Date(blog.date).toDateString()}</p>
-              <p>{blog.author}</p>
+          <li key={blog.id} className="mb-6">
+            <Link
+              to={`/blogs/${blog.id}`}
+              className="block p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:scale-105 transition-transform no-underline text-black"
+            >
+              <h2 className="text-2xl font-semibold mb-3 font-sans">
+                {blog.title}
+              </h2>
+              <p className="text-sm text-gray-500 mb-1">
+                {new Date(blog.date).toDateString()}
+              </p>
+              <p className="text-base text-gray-600 font-medium">
+                {blog.author}
+              </p>
             </Link>
           </li>
         ))}
