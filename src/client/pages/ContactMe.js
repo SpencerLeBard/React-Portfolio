@@ -6,32 +6,32 @@ function ContactMe() {
   return (
     <div className="ContactMe">
       {/* Header */}
-      <header className="bg-white shadow-md py-4 relative z-10">
+      <header className="bg-gray-800 shadow-md py-4">
         <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-4xl font-bold font-mono text-black">
+          <h1 className="text-4xl font-bold font-mono text-gray-200">
             Spencer LeBard
           </h1>
           <nav className="space-x-8">
             <Link
-              className="text-lg font-medium text-gray-800 hover:text-blue-600"
+              className="text-lg font-medium text-black no-underline hover:text-gray-800 transition duration-200"
               to="/"
             >
               Home
             </Link>
             <Link
-              className="text-lg font-medium text-gray-800 hover:text-blue-600"
+              className="text-lg font-medium text-black no-underline hover:text-gray-800 transition duration-200"
               to="/Portfolio"
             >
               Portfolio
             </Link>
             <Link
-              className="text-lg font-medium text-gray-800 hover:text-blue-600"
+              className="text-lg font-medium text-black no-underline hover:text-gray-800 transition duration-200"
               to="/Blogs"
             >
               Blog
             </Link>
             <Link
-              className="text-lg font-medium text-gray-800 hover:text-blue-600"
+              className="text-lg font-medium text-black no-underline hover:text-gray-800 transition duration-200"
               to="/ContactMe"
             >
               Contact Me
