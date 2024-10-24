@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
-    <div className="white-block min-h-screen flex flex-col bg-gray-100">
+    <div className="min-h-screen flex flex-col bg-gray-100">
       <header className="bg-white shadow-md py-4">
         <div className="container mx-auto flex justify-between items-center">
           <h1 className="text-4xl font-bold font-mono text-black">
@@ -59,14 +60,15 @@ function Home() {
       </section>
 
       {/* FOOTER SECTION */}
-      <footer className="bg-gray-800 text-gray-200 py-6 mt-auto">
+      <Footer />
+      {/* <footer className="bg-gray-800 text-gray-200 py-6 mt-auto shadow-md">
         <div className="container mx-auto text-center">
           <p className="text-sm">
             &copy; {new Date().getFullYear()} Spencer LeBard. All rights
             reserved.
           </p>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 }

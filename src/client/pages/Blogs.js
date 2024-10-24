@@ -1,6 +1,7 @@
 import React from "react";
 import BlogList from "../components/BlogList";
 // import Header from "../components/Header";
+import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 
 const Blogs = () => {
@@ -47,6 +48,7 @@ const Blogs = () => {
         </h1>
         <BlogList />
       </div>
+      <Footer />
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const Portfolio = () => {
   const projects = [
@@ -94,6 +95,7 @@ const Portfolio = () => {
           </div>
         ))}
       </div>
+      <Footer />
     </div>
   );
 };
