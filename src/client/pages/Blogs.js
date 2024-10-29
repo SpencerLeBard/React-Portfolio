@@ -19,6 +19,7 @@ const Blogs = () => {
             className="sm:hidden text-gray-200 hover:text-gray-400 focus:outline-none"
             onClick={() => setMenuOpen(!menuOpen)}
           >
+            {/* This draws the X  and hamburger so i dont have to download image */}
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               {menuOpen ? (
                 <path
