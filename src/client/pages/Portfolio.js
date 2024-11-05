@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
+import whiteBackground from "../Assets/whitebackground.jpg";
 
 const Portfolio = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -37,7 +38,7 @@ const Portfolio = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Header */}
+      {/* Header without background */}
       <header className="bg-gray-800 shadow-md py-4 relative z-10">
         <div className="container mx-auto flex justify-between items-center px-4">
           <h1 className="text-2xl sm:text-4xl font-bold font-mono text-gray-200">
@@ -99,37 +100,51 @@ const Portfolio = () => {
         </div>
       </header>
 
+      {/* Main content and Footer with background image */}
       <div
-        className={`container mx-auto p-4 flex-grow ${menuOpen ? "mt-20" : ""}`}
+        className="flex-grow flex flex-col"
+        style={{
+          backgroundImage: `url(${whiteBackground})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
-        <h1 className="text-4xl font-bold text-center mb-8">My Portfolio</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="bg-white shadow-md rounded-lg overflow-hidden"
-            >
-              <img
-                className="w-full h-48 object-cover"
-                src={project.imageUrl}
-                alt={project.title}
-              />
-              <div className="p-4">
-                <h3 className="text-xl font-semibold">{project.title}</h3>
-                <p className="mt-2 text-gray-600">{project.description}</p>
-                <a
-                  href="#"
-                  className="inline-block mt-4 text-blue-500 hover:text-blue-700"
-                >
-                  View Details
-                </a>
+        {/* Main Content */}
+        <div
+          className={`container mx-auto p-4 flex-grow ${
+            menuOpen ? "mt-20" : ""
+          }`}
+        >
+          <h1 className="text-4xl font-bold text-center mb-8">My Portfolio</h1>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                className="bg-white shadow-md rounded-lg overflow-hidden"
+              >
+                <img
+                  className="w-full h-48 object-cover"
+                  src={project.imageUrl}
+                  alt={project.title}
+                />
+                <div className="p-4">
+                  <h3 className="text-xl font-semibold">{project.title}</h3>
+                  <p className="mt-2 text-gray-600">{project.description}</p>
+                  <a
+                    href="#"
+                    className="inline-block mt-4 text-blue-500 hover:text-blue-700"
+                  >
+                    View Details
+                  </a>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
 
-      <Footer />
+        {/* Footer with background image */}
+        <Footer />
+      </div>
     </div>
   );
 };

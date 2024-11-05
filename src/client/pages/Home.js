@@ -1,21 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
-import background from "../Assets/cracks.jpg";
+import background from "../Assets/whitebackground.jpg";
 
 function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div
-      className="min-h-screen flex flex-col"
-      style={{
-        backgroundImage: `url(${background})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      {/* Header */}
+    <div className="min-h-screen flex flex-col">
+      {/* Header without background */}
       <header className="bg-gray-800 shadow-md py-4 relative z-10">
         <div className="container mx-auto flex justify-between items-center px-4">
           <h1 className="text-2xl sm:text-4xl font-bold font-mono text-gray-200">
@@ -26,7 +19,6 @@ function Home() {
             className="sm:hidden text-gray-200 hover:text-gray-400 focus:outline-none"
             onClick={() => setMenuOpen(!menuOpen)}
           >
-            {/* Icon toggle between hamburger and X */}
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               {menuOpen ? (
                 <path
@@ -78,31 +70,41 @@ function Home() {
         </div>
       </header>
 
-      {/* HERO SECTION */}
-      <section
-        className={`hero-section flex-grow flex items-center justify-center py-20 ${
-          menuOpen ? "mt-20" : ""
-        }`}
+      {/* Main content and Footer with background image */}
+      <div
+        className="flex-grow flex flex-col"
+        style={{
+          backgroundImage: `url(${background})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
-        <div className="container mx-auto text-center bg-white bg-opacity-70 p-6 rounded-lg shadow-lg">
-          <h2 className="text-5xl font-extrabold text-gray-800 mb-6">
-            Welcome to My Professional Portfolio
-          </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-10">
-            Explore my work, read my latest blogs, and let's collaborate to
-            create meaningful software solutions together.
-          </p>
-          <Link
-            to="/Portfolio"
-            className="inline-block bg-blue-600 text-gray-200 px-8 py-4 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 font-medium text-black no-underline "
-          >
-            View My Work
-          </Link>
-        </div>
-      </section>
+        {/* HERO SECTION */}
+        <section
+          className={`hero-section flex-grow flex items-center justify-center py-20 ${
+            menuOpen ? "mt-20" : ""
+          }`}
+        >
+          <div className="container mx-auto text-center bg-white bg-opacity-70 p-6 rounded-lg shadow-lg">
+            <h2 className="text-5xl font-extrabold text-gray-800 mb-6">
+              Welcome to My Professional Portfolio
+            </h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-10">
+              Explore my work, read my latest blogs, and let's collaborate to
+              create meaningful software solutions together.
+            </p>
+            <Link
+              to="/Portfolio"
+              className="inline-block bg-blue-600 text-gray-200 px-8 py-4 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 font-medium text-black no-underline "
+            >
+              View My Work
+            </Link>
+          </div>
+        </section>
 
-      {/* Footer */}
-      <Footer />
+        {/* Footer with background image */}
+        <Footer />
+      </div>
     </div>
   );
 }

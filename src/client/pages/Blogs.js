@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import BlogList from "../components/BlogList";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
+import whiteBackground from "../Assets/whitebackground.jpg";
 
 const Blogs = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Header */}
+      {/* Header without background */}
       <header className="bg-gray-800 shadow-md py-4 relative z-10">
         <div className="container mx-auto flex justify-between items-center px-4">
           <h1 className="text-2xl sm:text-4xl font-bold font-mono text-gray-200">
@@ -19,7 +20,6 @@ const Blogs = () => {
             className="sm:hidden text-gray-200 hover:text-gray-400 focus:outline-none"
             onClick={() => setMenuOpen(!menuOpen)}
           >
-            {/* This draws the X  and hamburger so i dont have to download image */}
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               {menuOpen ? (
                 <path
@@ -71,16 +71,30 @@ const Blogs = () => {
         </div>
       </header>
 
-      {/* Main Content */}
+      {/* Main content and Footer with background image */}
       <div
-        className={`container mx-auto p-4 flex-grow ${menuOpen ? "mt-20" : ""}`}
+        className="flex-grow flex flex-col"
+        style={{
+          backgroundImage: `url(${whiteBackground})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
-        <h1 className="text-4xl font-bold text-center mb-8">
-          Welcome to Spencer's Blog
-        </h1>
-        <BlogList />
+        {/* Main Content */}
+        <div
+          className={`container mx-auto p-4 flex-grow ${
+            menuOpen ? "mt-20" : ""
+          }`}
+        >
+          <h1 className="text-4xl font-bold text-center mb-8">
+            Welcome to Spencer's Blog
+          </h1>
+          <BlogList />
+        </div>
+
+        {/* Footer with background image */}
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 };
