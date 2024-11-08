@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
-import whiteBackground from "../Assets/whitebackground.jpg";
+import whiteBackground from "../Assets/largecubbybackground.jpg";
 
 const Portfolio = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -115,7 +115,9 @@ const Portfolio = () => {
             menuOpen ? "mt-20" : ""
           }`}
         >
-          <h1 className="text-4xl font-bold text-center mb-8">My Portfolio</h1>
+          <h1 className="text-4xl font-bold text-center mb-8">
+            Spencer's Portfolio
+          </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project, index) => (
               <div

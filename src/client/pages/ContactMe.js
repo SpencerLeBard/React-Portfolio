@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import background from "../Assets/whitebackground.jpg";
+import background from "../Assets/largecubbybackground.jpg";
 import { Link } from "react-router-dom";
 
 function ContactMe() {

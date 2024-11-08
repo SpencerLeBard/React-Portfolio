@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
-import background from "../Assets/whitebackground.jpg";
+import background from "../Assets/largecubbybackground.jpg";
 
 function Home() {
   const [menuOpen, setMenuOpen] = useState(false);

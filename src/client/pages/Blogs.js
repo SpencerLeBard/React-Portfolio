@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import BlogList from "../components/BlogList";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
-import whiteBackground from "../Assets/whitebackground.jpg";
+import whiteBackground from "../Assets/largecubbybackground.jpg";
 
 const Blogs = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -87,7 +87,7 @@ const Blogs = () => {
           }`}
         >
           <h1 className="text-4xl font-bold text-center mb-8">
-            Welcome to Spencer's Blog
+            Spencer's Blogs
           </h1>
           <BlogList />
         </div>
