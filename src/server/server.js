@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const mysql = require("mysql2");
 const bcrypt = require("bcrypt"); // For password hashing
@@ -11,6 +12,7 @@ app.use(express.json()); // Middleware to parse JSON
 
 // Secret key for JWT (store this in environment variables in production)
 const secretKey = "your_secret_key";
+//const secretKey = process.env.JWT_SECRET;
 
 // MySQL connection setup
 const db = mysql.createConnection({
@@ -94,7 +96,7 @@ app.post("/api/login", (req, res) => {
     }
   );
 });
-
+//ANCHOR BLOG ROUTES BELOW ************************************
 // Route to get all blogs for BlogList component or Postman
 app.get("/api/blogs", (req, res) => {
   const sql = "SELECT * FROM blogs";
