@@ -22,6 +22,12 @@ const db = mysql.createConnection({
   database: "BlogDB",
 });
 
+//NOTE : HIT POSTMAN: http://localhost:5000/api/login
+// {
+// "username": "Admin"
+// "password": "spencer47"
+// }
+
 db.connect((err) => {
   if (err) throw err;
   console.log("Connected to MySQL database");
