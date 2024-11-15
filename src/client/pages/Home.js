@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import background from "../Assets/largecubbybackground.jpg";
-import logo from "../Assets/SLlogov2.png"; // Import the logo with updated path
+import logo from "../Assets/SLlogov2.png";
 
 function Home() {
   const [menuOpen, setMenuOpen] = useState(false);

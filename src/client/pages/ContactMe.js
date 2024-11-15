@@ -1,18 +1,28 @@
 import React, { useState } from "react";
 import background from "../Assets/largecubbybackground.jpg";
 import { Link } from "react-router-dom";
+import logo from "../Assets/SLlogov2.png";
 
 function ContactMe() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="ContactMe min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col relative">
+      {/* Logo positioned on the far left of the screen */}
+      <img
+        src={logo}
+        alt="Website Logo"
+        className="absolute top-6 left-0 h-12 w-12 ml-4"
+      />
+
       {/* Header without background */}
       <header className="bg-gray-800 shadow-md py-4 relative z-10">
-        <div className="container mx-auto flex justify-between items-center px-4">
+        <div className="container mx-auto flex justify-center sm:justify-between items-center px-4">
+          {/* Title Section */}
           <h1 className="text-2xl sm:text-4xl font-bold font-mono text-gray-200">
             Spencer LeBard
           </h1>
+
           {/* Mobile menu button */}
           <button
             className="sm:hidden text-gray-200 hover:text-gray-400 focus:outline-none"
@@ -34,6 +44,7 @@ function ContactMe() {
               )}
             </svg>
           </button>
+
           {/* Navigation Links */}
           <nav
             className={`${
