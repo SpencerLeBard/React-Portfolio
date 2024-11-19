@@ -13,6 +13,7 @@ app.use(express.json()); // Middleware to parse JSON
 // Secret key for JWT (store this in environment variables in production)
 const secretKey = "your_secret_key";
 //const secretKey = process.env.JWT_SECRET;
+console.log("********************** secret key " + secretKey);
 
 // MySQL connection setup
 const db = mysql.createConnection({

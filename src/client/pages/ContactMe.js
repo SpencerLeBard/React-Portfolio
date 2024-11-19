@@ -15,10 +15,10 @@ function ContactMe() {
         className="absolute top-6 left-0 h-12 w-12 ml-4"
       />
 
-      {/* Header without background */}
+      {/* Header */}
       <header className="bg-gray-800 shadow-md py-4 relative z-10">
-        <div className="container mx-auto flex justify-center sm:justify-between items-center px-4">
-          {/* Title Section */}
+        <div className="container mx-auto flex justify-between items-center px-4">
+          {/* Logo or Title */}
           <h1 className="text-2xl sm:text-4xl font-bold font-mono text-gray-200">
             Spencer LeBard
           </h1>
@@ -50,37 +50,44 @@ function ContactMe() {
             className={`${
               menuOpen ? "block" : "hidden"
             } w-full bg-gray-800 border-t border-black sm:relative sm:flex sm:items-center sm:space-x-8 sm:bg-transparent sm:border-none sm:w-auto`}
-            style={{ zIndex: 9 }}
           >
             <Link
-              className="block sm:inline-block px-4 py-2 text-lg font-medium text-black no-underline hover:text-gray-300 transition duration-200"
+              className="block sm:inline-block px-4 py-2 text-lg font-medium text-gray-200 no-underline hover:text-gray-300 transition duration-200"
               to="/"
             >
               Home
             </Link>
             <Link
-              className="block sm:inline-block px-4 py-2 text-lg font-medium text-black no-underline hover:text-gray-300 transition duration-200"
+              className="block sm:inline-block px-4 py-2 text-lg font-medium text-gray-200 no-underline hover:text-gray-300 transition duration-200"
               to="/Portfolio"
             >
               Portfolio
             </Link>
             <Link
-              className="block sm:inline-block px-4 py-2 text-lg font-medium text-black no-underline hover:text-gray-300 transition duration-200"
+              className="block sm:inline-block px-4 py-2 text-lg font-medium text-gray-200 no-underline hover:text-gray-300 transition duration-200"
               to="/Blogs"
             >
               Blog
             </Link>
             <Link
-              className="block sm:inline-block px-4 py-2 text-lg font-medium text-black no-underline hover:text-gray-300 transition duration-200"
+              className="block sm:inline-block px-4 py-2 text-lg font-medium text-gray-200 no-underline hover:text-gray-300 transition duration-200"
               to="/ContactMe"
             >
               Contact Me
             </Link>
           </nav>
+
+          {/* Login Button */}
+          <Link
+            to="/login"
+            className="hidden sm:inline-block border border-gray-200 rounded hover:bg-gray-700 hover:text-white transition duration-300 px-4 py-2 text-lg font-medium text-gray-200 no-underline hover:text-gray-300"
+          >
+            Login
+          </Link>
         </div>
       </header>
 
-      {/* Main content and footer with white background */}
+      {/* Main content and footer */}
       <div
         className="flex-grow flex flex-col"
         style={{
@@ -89,7 +96,7 @@ function ContactMe() {
           backgroundPosition: "center",
         }}
       >
-        {/* Contact Info Section with Specific Background */}
+        {/* Contact Info Section */}
         <div className={`relative h-screen ${menuOpen ? "mt-20" : ""}`}>
           {/* Background Art for Contact Section */}
           <img

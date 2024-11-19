@@ -19,33 +19,11 @@ const Blogs = () => {
 
       {/* Header without background */}
       <header className="bg-gray-800 shadow-md py-4 relative z-10">
-        <div className="container mx-auto flex justify-center sm:justify-between items-center px-4">
-          {/* Title Section */}
+        <div className="container mx-auto flex justify-between items-center px-4">
+          {/* Logo or Title */}
           <h1 className="text-2xl sm:text-4xl font-bold font-mono text-gray-200">
             Spencer LeBard
           </h1>
-
-          {/* Mobile menu button */}
-          <button
-            className="sm:hidden text-gray-200 hover:text-gray-400 focus:outline-none"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              {menuOpen ? (
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M18.707 5.293a1 1 0 00-1.414 0L12 10.586 6.707 5.293a1 1 0 00-1.414 1.414l5.293 5.293-5.293 5.293a1 1 0 001.414 1.414L12 13.414l5.293 5.293a1 1 0 001.414-1.414l-5.293-5.293 5.293-5.293a1 1 0 000-1.414z"
-                />
-              ) : (
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M4 5h16a1 1 0 010 2H4a1 1 0 010-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2z"
-                />
-              )}
-            </svg>
-          </button>
 
           {/* Navigation Links */}
           <nav
@@ -79,6 +57,14 @@ const Blogs = () => {
               Contact Me
             </Link>
           </nav>
+
+          {/* Login Button */}
+          <Link
+            to="/login"
+            className="border border-gray-200 rounded hover:bg-gray-700 hover:text-white transition duration-300 lock sm:inline-block px-4 py-2 text-lg font-medium text-black no-underline hover:text-gray-300 transition duration-200"
+          >
+            Login
+          </Link>
         </div>
       </header>
 
