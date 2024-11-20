@@ -36,25 +36,25 @@ function Home() {
             } w-full bg-gray-800 border-t border-black sm:relative sm:flex sm:items-center sm:space-x-8 sm:bg-transparent sm:border-none sm:w-auto`}
           >
             <Link
-              className="block sm:inline-block px-4 py-2 text-lg font-medium text-gray-200 no-underline hover:text-gray-300 transition duration-200"
+              className="lock sm:inline-block px-4 py-2 text-lg font-medium text-black no-underline hover:text-gray-300 transition duration-200"
               to="/"
             >
               Home
             </Link>
             <Link
-              className="block sm:inline-block px-4 py-2 text-lg font-medium text-gray-200 no-underline hover:text-gray-300 transition duration-200"
+              className="lock sm:inline-block px-4 py-2 text-lg font-medium text-black no-underline hover:text-gray-300 transition duration-200"
               to="/Portfolio"
             >
               Portfolio
             </Link>
             <Link
-              className="block sm:inline-block px-4 py-2 text-lg font-medium text-gray-200 no-underline hover:text-gray-300 transition duration-200"
+              className="lock sm:inline-block px-4 py-2 text-lg font-medium text-black no-underline hover:text-gray-300 transition duration-200"
               to="/Blogs"
             >
               Blog
             </Link>
             <Link
-              className="block sm:inline-block px-4 py-2 text-lg font-medium text-gray-200 no-underline hover:text-gray-300 transition duration-200"
+              className="lock sm:inline-block px-4 py-2 text-lg font-medium text-black no-underline hover:text-gray-300 transition duration-200"
               to="/ContactMe"
             >
               Contact Me
@@ -96,7 +96,7 @@ function Home() {
             </p>
             <Link
               to="/Portfolio"
-              className="inline-block bg-blue-600 text-gray-200 px-8 py-4 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 font-medium no-underline"
+              className="inline-block bg-gray-600 text-gray-200 px-8 py-4 rounded-lg shadow-lg hover:bg-gray-700 transition duration-300 font-medium no-underline"
             >
               View My Work
             </Link>
@@ -130,7 +130,7 @@ function Home() {
                   type="text"
                   id="username"
                   name="username"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-300 bg-white text-black"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-gray-300 bg-white text-black"
                 />
               </div>
               <div className="mb-4">
@@ -144,7 +144,7 @@ function Home() {
                   type="password"
                   id="password"
                   name="password"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-300 bg-white text-black"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-gray-300 bg-white text-black"
                 />
               </div>
               <div className="flex justify-end">
@@ -157,7 +157,7 @@ function Home() {
                 </button>
                 <button
                   type="submit"
-                  className="bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 text-black"
+                  className="bg-gray-600 px-4 py-2 rounded-lg hover:bg-gray-700 text-black"
                 >
                   Submit
                 </button>

@@ -52,25 +52,25 @@ function ContactMe() {
             } w-full bg-gray-800 border-t border-black sm:relative sm:flex sm:items-center sm:space-x-8 sm:bg-transparent sm:border-none sm:w-auto`}
           >
             <Link
-              className="block sm:inline-block px-4 py-2 text-lg font-medium text-gray-200 no-underline hover:text-gray-300 transition duration-200"
+              className="lock sm:inline-block px-4 py-2 text-lg font-medium text-black no-underline hover:text-gray-300 transition duration-200"
               to="/"
             >
               Home
             </Link>
             <Link
-              className="block sm:inline-block px-4 py-2 text-lg font-medium text-gray-200 no-underline hover:text-gray-300 transition duration-200"
+              className="lock sm:inline-block px-4 py-2 text-lg font-medium text-black no-underline hover:text-gray-300 transition duration-200"
               to="/Portfolio"
             >
               Portfolio
             </Link>
             <Link
-              className="block sm:inline-block px-4 py-2 text-lg font-medium text-gray-200 no-underline hover:text-gray-300 transition duration-200"
+              className="lock sm:inline-block px-4 py-2 text-lg font-medium text-black no-underline hover:text-gray-300 transition duration-200"
               to="/Blogs"
             >
               Blog
             </Link>
             <Link
-              className="block sm:inline-block px-4 py-2 text-lg font-medium text-gray-200 no-underline hover:text-gray-300 transition duration-200"
+              className="lock sm:inline-block px-4 py-2 text-lg font-medium text-black no-underline hover:text-gray-300 transition duration-200"
               to="/ContactMe"
             >
               Contact Me
@@ -80,7 +80,7 @@ function ContactMe() {
           {/* Login Button */}
           <Link
             to="/login"
-            className="hidden sm:inline-block border border-gray-200 rounded hover:bg-gray-700 hover:text-white transition duration-300 px-4 py-2 text-lg font-medium text-gray-200 no-underline hover:text-gray-300"
+            className="hidden sm:inline-block border border-gray-200 rounded lock sm:inline-block px-4 py-2 text-lg font-medium text-black no-underline hover:text-gray-300 transition duration-200"
           >
             Login
           </Link>
