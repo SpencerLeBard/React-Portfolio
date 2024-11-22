@@ -31,15 +31,14 @@ function Home() {
         >
           <div className="container mx-auto text-center bg-white bg-opacity-70 p-6 rounded-lg shadow-lg">
             <h2 className="text-5xl font-extrabold text-gray-800 mb-6">
-              Welcome to My Professional Portfolio
+              Welcome to Spencer LeBard's portfolio and blog!
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-10">
-              Explore my work, read my latest blogs, and let's collaborate to
-              create meaningful software solutions together.
+              Explore my work and read my latest blogs here.
             </p>
             <Link
               to="/Portfolio"
-              className="inline-block bg-gray-600 text-gray-200 px-8 py-4 rounded-lg shadow-lg hover:bg-gray-700 transition duration-300 font-medium no-underline"
+              className="inline-block bg-gray-600 text-gray-200 px-8 py-4 rounded-lg shadow-lg hover:bg-gray-700 transition duration-300 font-medium no-underline block sm:inline-block px-4 py-2 text-lg font-medium text-black no-underline hover:text-gray-300 transition duration-200"
             >
               View My Work
             </Link>
