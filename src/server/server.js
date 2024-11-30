@@ -158,7 +158,7 @@ app.put("/api/blogs/:id", (req, res) => {
     if (result.affectedRows === 0) {
       return res.status(404).json({ error: "Blog post not found" });
     }
-    res.json({ message: "Blog post updated successfully!" });
+    res.json({ message: "Blog post updated successfully!!" });
   });
 });
 
