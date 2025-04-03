@@ -6,7 +6,7 @@ import blogData from "./BlogData"; // NEW: hardcoded blog data
 function BlogDetail() {
   const { id } = useParams(); // Extract the blog ID from the URL
 
-  // const [blog, setBlog] = useState(null); // Initialize state to hold the blog data
+  // const [blog, setBlog] = useState(null); // Initialize state to hold the blog dat
 
   // useEffect(() => {
   //   // Fetch the blog details from the backend
