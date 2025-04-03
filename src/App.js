@@ -4,7 +4,7 @@ import Blogs from "./client/pages/Blogs";
 import Home from "./client/pages/Home";
 import Portfolio from "./client/pages/Portfolio";
 import ContactMe from "./client/pages/ContactMe";
-import BlogDetail from "./client/components/BlogDetail";
+import BlogDetail from "./client/Components/BlogDetail";
 
 function App() {
   return (

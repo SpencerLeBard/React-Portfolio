@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Footer from "../components/Footer";
+import Footer from "../Components/Footer";
 import background from "../Assets/largecubbybackground.jpg";
-import Header from "../components/Header";
+import Header from "../Components/Header";
 
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);

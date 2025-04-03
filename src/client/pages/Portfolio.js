@@ -1,6 +1,6 @@
 import React from "react";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+import Footer from "../Components/Footer";
+import Header from "../Components/Header";
 import whiteBackground from "../Assets/largecubbybackground.jpg";
 
 const Portfolio = () => {
@@ -31,6 +31,13 @@ const Portfolio = () => {
         "Create and connect Salesforce to FI's internal tools and systems",
       imageUrl:
         "https://i.pinimg.com/originals/5e/33/c5/5e33c5a821960f5d467f1f51b40477fc.jpg",
+    },
+    {
+      title: "Truist",
+      description:
+        "Building and integrating Salesforce Scheduler with their Lobby Leader iOS app",
+      imageUrl:
+        "https://interbrand.com/wp-content/uploads/2020/01/1_Logo-cropped.jpg",
     },
   ];
 

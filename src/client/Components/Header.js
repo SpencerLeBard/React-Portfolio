@@ -76,12 +76,12 @@ function Header({ openModal }) {
         </nav>
 
         {/* Login Button */}
-        <button
+        {/* <button
           onClick={openModal} // Use the openModal function passed as a prop
           className="border border-gray-200 rounded hover:bg-gray-700 hover:text-white transition duration-300 sm:inline-block px-4 py-2 text-lg font-medium text-gray-200 no-underline hover:text-gray-300"
         >
           Login
-        </button>
+        </button> */}
       </div>
     </header>
   );

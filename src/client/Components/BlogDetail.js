@@ -1,29 +1,33 @@
-import React, { useEffect, useState } from "react";
+import React /*, { useEffect, useState }*/ from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
+import blogData from "./BlogData"; // NEW: hardcoded blog data
 
 function BlogDetail() {
   const { id } = useParams(); // Extract the blog ID from the URL
-  const [blog, setBlog] = useState(null); // Initialize state to hold the blog data
 
-  useEffect(() => {
-    // Fetch the blog details from the backend
-    axios
-      .get(`http://localhost:5000/api/blogs/${id}`)
-      .then((response) => {
-        setBlog(response.data); // Update the state with the fetched blog data
-      })
-      .catch((error) => {
-        console.error("Error fetching blog details:", error);
-      });
-  }, [id]); // Re-run this effect whenever the blog ID changes
+  // const [blog, setBlog] = useState(null); // Initialize state to hold the blog data
+
+  // useEffect(() => {
+  //   // Fetch the blog details from the backend
+  //   axios
+  //     .get(`http://localhost:5000/api/blogs/${id}`)
+  //     .then((response) => {
+  //       setBlog(response.data); // Update the state with the fetched blog data
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error fetching blog details:", error);
+  //     });
+  // }, [id]); // Re-run this effect whenever the blog ID changes
+
+  const blog = blogData.find((b) => b.id === parseInt(id)); // NEW: lookup from static data
 
   if (!blog) {
     return (
       <div className="flex items-center justify-center h-screen">
         <p className="text-gray-500 text-lg">Loading...</p>
       </div>
-    ); // Show loading state if data is not yet available
+    ); // Can show "Not Found" message instead if preferred
   }
 
   return (
