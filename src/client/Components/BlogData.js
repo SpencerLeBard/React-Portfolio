@@ -1,31 +1,40 @@
 const BlogData = [
     {
       id: 1,
-      title: "My First Blog Post",
-      date: "April 1, 2023",
-      excerpt: "A short intro to what this post is about...",
+      title: "Client Cried Wolf",
+      date: "April 2, 2025",
       content: `
-        <p>
-          This is the full content of my first blog post. You can
-          format it however you like—paragraphs, images, lists, etc.
-        </p>
-        <p>
-          More details here...
-        </p>
+        Story about a client who cried wolf. 
+        consultant did their best but left the client and the client told
+        everyone that the consultant sucked ... [look at DB for more]
       `,
     },
     {
       id: 2,
-      title: "My Second Blog Post",
-      date: "April 12, 2023",
-      excerpt: "Another short intro...",
+      title: "Consultants are Service Workers",
+      date: "April 3, 2025",
       content: `
-        <p>
-          Second blog post full content goes here.
-        </p>
+        high paying consulting is the same as fast food.  whenever money is 
+        exchanged for a service.  even millionare MDs get yelled at when their order
+        is wrong.
       `,
     },
-    // ... Add more blog objects as needed ...
+    {
+      id: 3,
+      title: "Corps are full of selfish people",
+      date: "April 12, 2023",
+      content: `
+        businesses are full of people who only care about themselves...
+      `,
+    },
+    {
+      id: 4,
+      title: "Flip the script: Short Story",
+      date: "April 12, 2023",
+      content: `
+        cowboys move to SF and Seattle and locals fightback and are not tellerant.
+      `,
+    }
   ];
   
   export default BlogData;
