@@ -34,7 +34,15 @@ const BlogData = [
       content: `
         cowboys move to SF and Seattle and locals fightback and are not tellerant.
       `,
-    }
+    },
+    {
+        id: 5,
+        title: "Flip the script: Short Story",
+        date: "April 12, 2023",
+        content: `
+          cowboys move to SF and Seattle and locals fightback and are not tellerant.
+        `,
+      }
   ];
   
   export default BlogData;
