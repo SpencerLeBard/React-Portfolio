@@ -37,10 +37,10 @@ const BlogData = [
     },
     {
         id: 5,
-        title: "Flip the script: Short Story",
+        title: "Salesforce developer: Day in the life",
         date: "April 12, 2023",
         content: `
-          cowboys move to SF and Seattle and locals fightback and are not tellerant.
+          How to be a salesforce dev.
         `,
       }
   ];
