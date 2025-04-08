@@ -20,22 +20,22 @@ const Portfolio = () => {
         "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/11/17/11/istock-89516603-medium.jpg",
     },
     {
-      title: "Google",
+      title: "Accenture / Google",
       description:
-        "Project Pidgeotto: Connect Salesforce to all Google's internal tools",
+        "While at Accenture, I spent almost 2 years building out Google's Salesforce org and connecting it to many of Google's internal tools",
       imageUrl: "https://pluspng.com/img-png/google-logo-png-open-2000.png",
     },
     {
-      title: "Fisher Investments",
+      title: "Accenture / Fisher Investments",
       description:
-        "Create and connect Salesforce to FI's internal tools and systems",
+        "Designed and implemented an algorithm within Salesforce Scheduler which automatically provides a list of the most efficient salespeople in a territory",
       imageUrl:
         "https://i.pinimg.com/originals/5e/33/c5/5e33c5a821960f5d467f1f51b40477fc.jpg",
     },
     {
-      title: "Truist",
+      title: "Accenture / Truist",
       description:
-        "Building and integrating Salesforce Scheduler with their Lobby Leader iOS app",
+        "Building and integrating Salesforce with many of their internals tools via APIs" ,
       imageUrl:
         "https://interbrand.com/wp-content/uploads/2020/01/1_Logo-cropped.jpg",
     },
@@ -74,12 +74,12 @@ const Portfolio = () => {
                 <div className="p-4">
                   <h3 className="text-xl font-semibold">{project.title}</h3>
                   <p className="mt-2 text-gray-600">{project.description}</p>
-                  <a
+                  {/* <a
                     href="#"
                     className="inline-block mt-4 text-blue-500 hover:text-blue-700"
                   >
                     View Details
-                  </a>
+                  </a> */}
                 </div>
               </div>
             ))}

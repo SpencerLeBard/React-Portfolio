@@ -7,11 +7,11 @@ function Header({ openModal }) {
 
   return (
     <header className="bg-gray-800 shadow-md py-4 relative z-10">
-      {/* Logo positioned on the far left */}
+      {/* Logo positioned on the far left, hidden on mobile */}
       <img
         src={logo}
         alt="Website Logo"
-        className="absolute top-6 left-0 h-12 w-12 ml-4"
+        className="absolute top-6 left-0 h-12 w-12 ml-4 hidden sm:block"
       />
 
       <div className="container mx-auto flex justify-between items-center px-4">
@@ -56,19 +56,18 @@ function Header({ openModal }) {
           </Link>
           <Link
             className="block sm:inline-block px-4 py-2 text-lg font-medium text-black no-underline hover:text-gray-300 transition duration-200"
+            to="/Blogs"
+          >
+            Blog
+          </Link>
+          <Link
+            className="block sm:inline-block px-4 py-2 text-lg font-medium text-black no-underline hover:text-gray-300 transition duration-200"
             to="/Portfolio"
           >
             Portfolio
           </Link>
           <Link
             className="block sm:inline-block px-4 py-2 text-lg font-medium text-black no-underline hover:text-gray-300 transition duration-200"
-            to="/Blogs"
-          >
-            Blog
-          </Link>
-          <Link
-            className="block sm:inline-block px-4 py-2 text-lg font-medium text-black no-underline hover:text-gray-300 transition duration-200
-"
             to="/ContactMe"
           >
             Contact Me
@@ -77,7 +76,7 @@ function Header({ openModal }) {
 
         {/* Login Button */}
         {/* <button
-          onClick={openModal} // Use the openModal function passed as a prop
+          onClick={openModal}
           className="border border-gray-200 rounded hover:bg-gray-700 hover:text-white transition duration-300 sm:inline-block px-4 py-2 text-lg font-medium text-gray-200 no-underline hover:text-gray-300"
         >
           Login

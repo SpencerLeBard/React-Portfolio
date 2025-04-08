@@ -43,7 +43,7 @@ const BlogData = [
           How to be a salesforce dev.
         `,
       }
-      //NOTE: Look at your gmail drafts
+      //NOTE: Look at microsoft word
   ];
   
   export default BlogData;
