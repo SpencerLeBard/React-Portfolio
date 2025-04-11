@@ -26,7 +26,7 @@ function ContactMe() {
               Spencer LeBard
             </h1>
             <h1 className="text-black text-xl sm:text-2xl md:text-3xl font-bold font-mono mb-4">
-              slebard@gmail.com
+              spencer@spencer-lebard.com
             </h1>
             <h1 className="text-black text-xl sm:text-2xl md:text-3xl font-bold font-mono mb-4">
               <a

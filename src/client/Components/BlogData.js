@@ -9,16 +9,16 @@ const BlogData = [
     //     everyone that the consultant sucked ... [look at DB for more]
     //   `,
     // },
-    {
-      id: 2,
-      title: "Consultants are Service Workers",
-      date: "April 10, 2025",
-      content: `
-        high paying consulting is the same as fast food.  whenever money is 
-        exchanged for a service.  even millionare MDs get yelled at when their order
-        is wrong.
-      `,
-     }
+    // {
+    //   id: 2,
+    //   title: "Consultants are Service Workers",
+    //   date: "April 10, 2025",
+    //   content: `
+    //     high paying consulting is the same as fast food.  whenever money is 
+    //     exchanged for a service.  even millionare MDs get yelled at when their order
+    //     is wrong.
+    //   `,
+    //  }
     // {
     //   id: 3,
     //   title: "Corps are full of selfish people",
@@ -42,7 +42,15 @@ const BlogData = [
     //     content: `
     //       How to be a salesforce dev.
     //     `,
-    //   }
+    //   },
+      {
+        id: 6,
+        title: "[Blog Placeholder]",
+        date: "April 12, 2023",
+        content: `
+          [Placeholder]
+        `,
+      }
       //NOTE: Look at microsoft word
   ];
   
