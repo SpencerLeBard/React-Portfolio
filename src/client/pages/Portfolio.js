@@ -22,13 +22,13 @@ const Portfolio = () => {
     {
       title: "Accenture / Google",
       description:
-        "While at Accenture, I spent almost 2 years building out Google's Salesforce org and connecting it to many of Google's internal tools",
+        "While at Accenture, I spent almost 2 years building out Google's Salesforce org with custom code and connecting it to many of Google's internal tools via API",
       imageUrl: "https://pluspng.com/img-png/google-logo-png-open-2000.png",
     },
     {
       title: "Accenture / Fisher Investments",
       description:
-        "Designed and implemented an algorithm within Salesforce Scheduler which automatically provides a list of the most efficient salespeople in a territory",
+        "Designed and implemented an algorithm within Salesforce which automatically returns a list of the most efficient salespeople in a territory",
       imageUrl:
         "https://i.pinimg.com/originals/5e/33/c5/5e33c5a821960f5d467f1f51b40477fc.jpg",
     },
@@ -64,7 +64,7 @@ const Portfolio = () => {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="bg-white shadow-md rounded-lg overflow-hidden"
+                className="bg-white shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform"
               >
                 <img
                   className="w-full h-48 object-cover"

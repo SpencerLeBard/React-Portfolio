@@ -37,7 +37,7 @@ function Home() {
               to="/Blogs"
               className="inline-block bg-gray-600 text-black px-6 py-3 sm:px-8 sm:py-4 rounded-lg shadow-lg hover:bg-gray-700 transition duration-300 font-medium no-underline"
             >
-              Go to Blogs
+              Go to All Posts
             </Link>
           </div>
         </section>

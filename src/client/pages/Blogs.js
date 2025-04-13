@@ -31,7 +31,7 @@ const Blogs = () => {
       >
         {/* Main Content */}
         <div className="container mx-auto p-4 flex-grow">
-          <h1 className="text-4xl font-bold text-center mb-8">All Blogs</h1>
+          <h1 className="text-4xl font-bold text-center mb-8">All Posts</h1>
           <BlogList />
         </div>
 

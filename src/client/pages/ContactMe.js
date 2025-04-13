@@ -21,29 +21,29 @@ function ContactMe() {
         }}
       >
         <div className="relative flex-grow py-10 px-4 sm:px-6 md:px-8">
-          <div className="bg-white p-6 sm:p-10 rounded-2xl shadow-lg text-center max-w-xl mx-auto">
-            <h1 className="text-black text-2xl sm:text-3xl md:text-4xl font-bold font-mono mb-4">
+          <div className="bg-white p-8 sm:p-10 rounded-2xl shadow-lg text-center max-w-2xl mx-auto mb-8 sm:mb-0">
+            <h1 className="text-black text-2xl sm:text-3xl md:text-4xl font-bold font-mono mb-6">
               Spencer LeBard
             </h1>
-            <h1 className="text-black text-xl sm:text-2xl md:text-3xl font-bold font-mono mb-4">
+            <h1 className="text-black text-xl sm:text-2xl md:text-3xl font-bold font-mono mb-6">
               spencer@spencer-lebard.com
             </h1>
-            <h1 className="text-black text-xl sm:text-2xl md:text-3xl font-bold font-mono mb-4">
+            <h1 className="text-black text-xl sm:text-2xl md:text-3xl font-bold font-mono mb-6">
               <a
                 href="https://github.com/SpencerLeBard"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="break-all"
+                className="break-all sm:break-normal"
               >
                 github.com/SpencerLeBard
               </a>
             </h1>
-            <h1 className="text-black text-xl sm:text-2xl md:text-3xl font-bold font-mono">
+            <h1 className="text-black text-xl sm:text-2xl md:text-3xl font-bold font-mono mb-6">
               <a
                 href="https://linkedin.com/in/spencerlebard"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="break-all"
+                className="break-all sm:break-normal"
               >
                 linkedin.com/in/spencerlebard
               </a>
