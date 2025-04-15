@@ -22,23 +22,23 @@ const Portfolio = () => {
     {
       title: "Accenture / Google",
       description:
-        "While at Accenture, I spent almost 2 years building out Google's Salesforce org with custom code and connecting it to many of Google's internal tools via API",
+        "While at Accenture, I spent almost 2 years building out Google's Salesforce org with custom code and configuration. We achieved the goal of integrating with many of Google's internal tools via API.",
       imageUrl: "https://pluspng.com/img-png/google-logo-png-open-2000.png",
     },
     {
       title: "Accenture / Fisher Investments",
       description:
-        "Designed and implemented an algorithm within Salesforce which automatically returns a list of the most efficient salespeople in a territory",
+        "While customizing FI's Financial Services Salesforce org, I implemented an algorithm which automatically returns a list of the most efficient salespeople in a territory and routes meetings to those individuals. This increased closing rates by 15%.",
       imageUrl:
         "https://i.pinimg.com/originals/5e/33/c5/5e33c5a821960f5d467f1f51b40477fc.jpg",
     },
-    {
-      title: "Accenture / Truist",
-      description:
-        "Building and integrating Salesforce with many of their internals tools via APIs" ,
-      imageUrl:
-        "https://interbrand.com/wp-content/uploads/2020/01/1_Logo-cropped.jpg",
-    },
+    // {
+    //   title: "Accenture / Truist",
+    //   description:
+    //     "Implemented a niche Salesforce feature called “Lobby Management”, which allows for creating queues and waitlists for individual branches, which we exposed to other internal tools via API." ,
+    //   imageUrl:
+    //     "https://interbrand.com/wp-content/uploads/2020/01/1_Logo-cropped.jpg",
+    // },
   ];
 
   return (
