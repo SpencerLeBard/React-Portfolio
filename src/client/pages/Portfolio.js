@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
 import whiteBackground from "../Assets/largecubbybackground.jpg";
+import streamlinelogo from "../Assets/StreamlineLogo.png";
 
 const Portfolio = () => {
   const projects = [
@@ -12,6 +13,13 @@ const Portfolio = () => {
       imageUrl:
         "https://raw.githubusercontent.com/SpencerLeBard/PetPal/dev/clientsrc/src/assets/Home.PNG",
       link: "https://github.com/SpencerLeBard/PetPal"
+    },
+    {
+      title: "Streamline",
+      description:
+        "Modern Video Streaming website using the MERN stack",
+      imageUrl: streamlinelogo,
+      link: "https://github.com/SpencerLeBard/Streamline"
     },
     {
       title: "Bartendr",
@@ -39,7 +47,7 @@ const Portfolio = () => {
     // {
     //   title: "Accenture / Truist",
     //   description:
-    //     "Implemented a niche Salesforce feature called “Lobby Management”, which allows for creating queues and waitlists for individual branches, which we exposed to other internal tools via API." ,
+    //     "Implemented a niche Salesforce feature called "Lobby Management", which allows for creating queues and waitlists for individual branches, which we exposed to other internal tools via API." ,
     //   imageUrl:
     //     "https://interbrand.com/wp-content/uploads/2020/01/1_Logo-cropped.jpg",
     //   link: ""
@@ -69,16 +77,18 @@ const Portfolio = () => {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="bg-white shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform"
+                className="bg-white shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform flex flex-col justify-between h-full"
               >
                 <img
                   className="w-full h-48 object-cover"
                   src={project.imageUrl}
                   alt={project.title}
                 />
-                <div className="p-4">
-                  <h3 className="text-xl font-semibold">{project.title}</h3>
-                  <p className="mt-2 text-gray-600">{project.description}</p>
+                <div className="p-4 flex-grow flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-xl font-semibold">{project.title}</h3>
+                    <p className="mt-2 text-gray-600">{project.description}</p>
+                  </div>
                   {project.link && (
                     <a
                       href={project.link}
