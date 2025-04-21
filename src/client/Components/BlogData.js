@@ -45,10 +45,10 @@ const BlogData = [
     //   },
       {
         id: 6,
-        title: "[Blog Placeholder]",
-        date: "April 12, 2023",
+        title: "1: Introduction - A Little About Me ",
+        date: "April 21, 2025",
         content: `
-          [Placeholder]
+          A little about me. 
         `,
       }
       //NOTE: Look at microsoft word
