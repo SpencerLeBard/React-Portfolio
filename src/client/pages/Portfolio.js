@@ -7,19 +7,21 @@ import streamlinelogo from "../Assets/StreamlineLogo.png";
 const Portfolio = () => {
   const projects = [
     {
+      title: "Streamline",
+      description:
+      "Modern video hosting and streaming platform built with React, Node/Express, and MongoDB",
+      imageUrl: streamlinelogo,
+      link: "https://github.com/SpencerLeBard/Streamline",
+      liveLink: "https://streamline-app.example.com"
+    },
+    {
       title: "PetPal",
       description:
         "Full-stack application that utilizes Humane Society's API data and helps connect homeless animals with people looking to rescue a cat or dog. Ability to save favorite animals and connect with adoption agency.",
       imageUrl:
         "https://raw.githubusercontent.com/SpencerLeBard/PetPal/dev/clientsrc/src/assets/Home.PNG",
-      link: "https://github.com/SpencerLeBard/PetPal"
-    },
-    {
-      title: "Streamline",
-      description:
-        "Modern Video Streaming website using the MERN stack",
-      imageUrl: streamlinelogo,
-      link: "https://github.com/SpencerLeBard/Streamline"
+      link: "https://github.com/SpencerLeBard/PetPal",
+      // liveLink: "https://petpal.example.com"
     },
     {
       title: "Bartendr",
@@ -27,14 +29,16 @@ const Portfolio = () => {
         "Live stream from your favorite bar, see who is working and who is drinking",
       imageUrl:
         "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/11/17/11/istock-89516603-medium.jpg",
-      link: "https://github.com/SpencerLeBard/Bartendr"
+      link: "https://github.com/SpencerLeBard/Bartendr",
+      liveLink: ""
     },
     {
       title: "Accenture / Google",
       description:
         "While at Accenture, I spent almost 2 years building out Google's Salesforce org with custom code and configuration. We achieved the goal of integrating with many of Google's internal tools via API.",
       imageUrl: "https://pluspng.com/img-png/google-logo-png-open-2000.png",
-      link: ""
+      link: "",
+      liveLink: ""
     },
     {
       title: "Accenture / Fisher Investments",
@@ -42,7 +46,8 @@ const Portfolio = () => {
         "While customizing FI's Financial Services Salesforce org, I implemented an algorithm which automatically returns a list of the most efficient salespeople in a territory and routes meetings to those individuals. This increased closing rates by 15%.",
       imageUrl:
         "https://i.pinimg.com/originals/5e/33/c5/5e33c5a821960f5d467f1f51b40477fc.jpg",
-      link: ""
+      link: "",
+      liveLink: ""
     },
     // {
     //   title: "Accenture / Truist",
@@ -89,14 +94,28 @@ const Portfolio = () => {
                     <h3 className="text-xl font-semibold">{project.title}</h3>
                     <p className="mt-2 text-gray-600">{project.description}</p>
                   </div>
-                  {project.link && (
-                    <a
-                      href={project.link}
-                      className="inline-block mt-4 text-blue-500 hover:text-blue-700"
-                    >
-                      View on GitHub
-                    </a>
-                  )}
+                  <div className="mt-4 flex flex-col gap-2">
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        className="text-blue-500 hover:text-blue-700"
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        View on GitHub
+                      </a>
+                    )}
+                    {project.liveLink && (
+                      <a
+                        href={project.liveLink}
+                        className="text-green-500 hover:text-green-700"
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        View Live Project
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             ))}

@@ -7,7 +7,7 @@ function Header({ openModal }) {
 
   return (
     <header className="bg-gray-800 shadow-md py-4 relative z-10">
-      {/* Logo positioned on the far left, hidden on mobile */}
+      {/* Logos positioned on the far left, hidden on mobile */}
       <img
         src={logo}
         alt="Website Logo"
