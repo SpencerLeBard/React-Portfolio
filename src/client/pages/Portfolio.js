@@ -12,7 +12,7 @@ const Portfolio = () => {
       "Modern video hosting and streaming platform built with React, Node/Express, and MongoDB",
       imageUrl: streamlinelogo,
       link: "https://github.com/SpencerLeBard/Streamline",
-      liveLink: "https://streamline-app.example.com"
+      liveLink: "https://streamline-qxilndw7n-spencer-lebards-projects.vercel.app/"
     },
     {
       title: "PetPal",
