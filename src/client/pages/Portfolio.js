@@ -3,6 +3,7 @@ import Footer from "../Components/Footer";
 import Header from "../Components/Header";
 import whiteBackground from "../Assets/largecubbybackground.jpg";
 import streamlinelogo from "../Assets/StreamlineLogo.png";
+import textifylogo from "../Assets/Textify.png";
 
 const Portfolio = () => {
   const projects = [
@@ -24,12 +25,12 @@ const Portfolio = () => {
       // liveLink: "https://petpal.example.com"
     },
     {
-      title: "Bartendr",
+      title: "Textify",
       description:
-        "Live stream from your favorite bar, see who is working and who is drinking",
-      imageUrl:
-        "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/11/17/11/istock-89516603-medium.jpg",
-      link: "https://github.com/SpencerLeBard/Bartendr",
+        "Review Texting Site",
+      imageUrl: 
+      textifylogo,
+      link: "https://github.com/SpencerLeBard/Textify",
       liveLink: ""
     },
     {
