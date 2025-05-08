@@ -6,7 +6,7 @@ import streamlinelogo from "../Assets/StreamlineLogo.png";
 import textifylogo from "../Assets/Textify.png";
 
 const Portfolio = () => {
-  const projects = [
+  const personalProjects = [
     {
       title: "Streamline",
       description:
@@ -33,6 +33,9 @@ const Portfolio = () => {
       link: "https://github.com/SpencerLeBard/Textify",
       liveLink: ""
     },
+  ];
+
+  const workProjects = [
     {
       title: "Accenture / Google",
       description:
@@ -76,11 +79,55 @@ const Portfolio = () => {
       >
         {/* Main Content */}
         <div className="container mx-auto p-4 flex-grow">
-          <h1 className="text-4xl font-bold text-center mb-8">
-            Spencer's Portfolio
-          </h1>
+          {/* Personal Projects Section */}
+          <h1 className="text-4xl font-bold text-center mb-8 text-indigo-700 tracking-wide">Personal Projects</h1>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {personalProjects.map((project, index) => (
+              <div
+                key={index}
+                className="bg-white shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform flex flex-col justify-between h-full"
+              >
+                <img
+                  className="w-full h-48 object-cover"
+                  src={project.imageUrl}
+                  alt={project.title}
+                />
+                <div className="p-4 flex-grow flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-xl font-semibold">{project.title}</h3>
+                    <p className="mt-2 text-gray-600">{project.description}</p>
+                  </div>
+                  <div className="mt-4 flex flex-col gap-2">
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        className="text-blue-500 hover:text-blue-700"
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        View on GitHub
+                      </a>
+                    )}
+                    {project.liveLink && (
+                      <a
+                        href={project.liveLink}
+                        className="text-green-500 hover:text-green-700"
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        View Live Project
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Work Projects Section */}
+          <h1 className="text-4xl font-bold text-center mb-8 text-indigo-700 tracking-wide">Work Projects</h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project, index) => (
+            {workProjects.map((project, index) => (
               <div
                 key={index}
                 className="bg-white shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform flex flex-col justify-between h-full"
