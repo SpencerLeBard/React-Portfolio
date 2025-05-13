@@ -5,16 +5,15 @@ const BlogData = [
     title: "1: Introduction - A Little About Me ",
     date: "May 5, 2025",
     content: `
-      A little about me. My name is Spencer LeBard, and it’s been a winding journey to get here. I’ve been living in the Pacific Northwest almost my entire life. I grew up in Seattle and moved to Boise in middle school when my family couldn’t take another year of the soul crushing ‘big dark’ Seattle winter. I’ll never forget the day when my dad and I were in the car on the way home from soccer practice.  It was dark and rainy as I’ve ever seen.  We sat in silence as the traffic light made multiple cycles – green, yellow, red, green, yellow, red, over and over without moving in traffic.  I asked him “why do we live here?” and he sat in silence, for maybe a minute or two deeply pondering that question. Soon enough we were house hunting in the high desert of Boise, ID.  Now, some people out there will get upset if you count Boise, ID as a member of the PNW – I’m not here to have that argument (except it obviously is).
-  
-  There were a few exceptions to me living in the PNW. I lived in SL,UT for undergrad and China for a while when I didn’t know what I wanted to do out of school. I was a math and science ACT prep teacher in a small village of 10 million in Zhenzhou, China.  When I came back I worked for my dad for a little while before setting at a tech startup.  That’s where I found my love for technology.  I had always wanted to program (“program” was what it was called when I was young – as opposed to “code” or “develop” nowadays), I bought books, took classes at every level of my education but it never seemed to stick.  I think it didn’t stick was because I hated school and did the absolute bare minimum to graduate as fast as possible. Years later, I managed to convince the recruiters and hiring managers at a respectable software consultancy I was worth taking a chance on, so I worked my butt off and have managed to pull off the “up” option in the consulting “up or out” saying.
-  
-  The purpose of this blog is to take my experiences and perspective on technology, travel, bbq, life, love, and anything else that pops into my head and put it in writing here.  I hope you enjoy it as much as I do.
-  
-  -	Spencer
+      A little about me.
+My name is Spencer LeBard, and it's been a winding journey getting here. I've lived in the Pacific Northwest almost my entire life, growing up in Seattle before moving to Boise during middle school, when my family decided they couldn't endure another soul-crushing "big dark" Seattle winter. I'll never forget a particular evening ride home from soccer practice with my dad. It was as dark and rainy as I'd ever seen, and we sat silently, watching the traffic light cycle endlessly—green, yellow, red, repeat—without any cars moving. I asked him, "Why do we live here?" He paused thoughtfully, and considered the question.  Within weeks, we were house hunting in the sunny high desert of Boise, Idaho. Some might debate whether Boise belongs in the PNW—I'm not here to argue that (though it obviously does).
+I've ventured out of the Pacific Northwest a couple of times. First, to Salt Lake City, Utah, for my undergrad years, and later, to China when I wasn't sure what to do after graduation. I taught ACT math and science prep in Zhengzhou—a modest village of 10 million people. Returning stateside, I briefly worked with my dad before joining a tech startup, where I truly discovered my passion for technology.
+I'd always aspired to program—though back then, we called it "programming," not "coding" or "developing." Despite buying countless books and enrolling in programming classes throughout my education, it never really stuck, probably because I hated school and did just enough to graduate quickly. Eventually, though, I managed to convince recruiters and hiring managers at a respected software consultancy to take a chance on me. I worked by butt off, and ultimately achieving the "up" side of consulting's notorious "up or out" equation.
+This blog aims to share my experiences and perspectives on technology, travel, barbecue, life, love, and whatever else pops into my head. I hope you enjoy reading it as much as I enjoy writing it.
+
   
     `,
-    }
+    },
     
     // {
     //   id: 2,
@@ -36,14 +35,23 @@ const BlogData = [
     //     is wrong.
     //   `,
     //  }
-    // {
-    //   id: 3,
-    //   title: "Corps are full of selfish people",
-    //   date: "April 12, 2023",
-    //   content: `
-    //     businesses are full of people who only care about themselves...
-    //   `,
-    // },
+    {
+      id: 2,
+      title: "2: Businesses Are Full of Selfish People",
+      date: "May 12, 2025",
+      content: `
+        Something I’ve been thinking about recently: Most businesses and corporations are filled primarily with 
+        people who are selfish. There are exceptions, of course—I’m currently working with a woman who's been at her 
+        company for about 25 years and genuinely cares deeply about what's best for the organization and the customer's experience. But she represents an exception rather than the rule. 
+        Let’s set that aside for now and face the reality that, in general, most of your coworkers—IT guy, salespeople, or even those colleagues you're emailing for status updates right 
+        now—are fundamentally motivated by self-interest. They care about their promotions, raises, recognition, and—let's be frank—often doing 
+        just enough to avoid negative consequences. Yet here's the paradox I've been thinking on: Ironically, what 
+        actually benefits each individual the most is working genuinely hard and providing true value. Promotions, raises, and positive recognition are generally 
+        achieved by effort, initiative, and smart office politics. This brings to mind the paradox that Oppenheimer described about light 
+        existing simultaneously as particles and waves (“Its paradoxical, but it works”). Similarly, to succeed within a corporation, you must
+         embrace a dual reality: selfishly looking out for your own interests is most effective when it aligns closely with the value you provide to the company.
+      `,
+    },
     // {
     //   id: 4,
     //   title: "Flip the script: Short Story",
