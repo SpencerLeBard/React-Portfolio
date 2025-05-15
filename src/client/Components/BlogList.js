@@ -1,42 +1,36 @@
-import React /*, { useEffect, useState }*/ from "react";
-// import axios from "axios";
-import { Link } from "react-router-dom";
-import blogData from "./BlogData"; // NEW: Hardcoded blog data
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const BlogList = () => {
-  // const [blogs, setBlogs] = useState([]);
-  // useEffect(() => {
-  //   // Fetch blogs from the backend API
-  //   axios
-  //     .get("http://localhost:5000/api/blogs")
-  //     .then((response) => {
-  //       setBlogs(response.data); // Update state with the fetched blog data
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error fetching blogs:", error); // Handle any errors
-  //     });
-  // }, []); // Empty array ensures this effect runs only once on mount
+  const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const blogs = blogData; // Using hardcoded data instead of state
+  useEffect(() => {
+    axios.get('/api/server/blogs')
+      .then(res => {
+        setBlogs(res.data);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error('Error fetching blogs:', err);
+        setError('Failed to load blog posts.');
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) return <p>Loading blog posts…</p>;
+  if (error)   return <p>{error}</p>;
 
   return (
-    <div className="flex flex-col items-center mt-6">
-      <ul className="w-full max-w-4xl">
-        {blogs.map((blog) => (
-          <li key={blog.id} className="mb-6">
-            <Link
-              to={`/blogs/${blog.id}`}
-              className="block p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:scale-105 transition-transform no-underline text-black"
-            >
-              <h2 className="text-2xl font-semibold mb-3 font-sans">
-                {blog.title}
-              </h2>
-              <p className="text-sm text-gray-500 mb-1">
-                {new Date(blog.date).toDateString()}
-              </p>
-              <p className="text-base text-gray-600 font-medium">
-                {blog.author}
-              </p>
+    <div className="blog-list">
+      <h1>Blog Posts</h1>
+      <ul>
+        {blogs.map(blog => (
+          <li key={blog.id}>
+            <Link to={`/blogs/${blog.id}`}>
+              {blog.title}
             </Link>
           </li>
         ))}
