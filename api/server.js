@@ -1,94 +1,72 @@
 // api/server.js
 //
-// Monolithic Vercel Serverless Function
-// -------------------------------------
-// • Handles all blog-related endpoints
-// • Connects to Supabase using env vars
-// • Exports an Express app (NO app.listen)
+// Monolithic Express function for Vercel.
 //
-// Required env vars (set in Vercel & .env):
-//   SUPABASE_URL        = https://<project-ref>.supabase.co
-//   SUPABASE_ANON_KEY   = <anon-public-key>
+// • All requests come in as /api/server/*  because of vercel.json.
+// • Therefore each route here is written with that full prefix.
+// • No app.listen(); we export the app for Vercel to invoke.
 
-require('dotenv').config();                  // Safe: ignored in production if no .env
+require('dotenv').config();            // Loads .env locally (ignored in prod)
 
 const express = require('express');
 const cors = require('cors');
 const { createClient } = require('@supabase/supabase-js');
 
 const app = express();
-app.use(cors());                             // Allow same-origin & localhost during dev
-app.use(express.json());                     // Parse JSON request bodies
+app.use(cors());
+app.use(express.json());
 
-// Initialise Supabase client (re-used across invocations)
+// ────────────────────────────────────────────────────────────
+//  Initialize Supabase client (read-only for blogs)
+// ────────────────────────────────────────────────────────────
 const supabase = createClient(
-  process.env.SUPABASE_URL,
+  process.env.SUPABASE_URL,        // set in Vercel → Environment Variables
   process.env.SUPABASE_ANON_KEY
 );
 
-/* ------------------------------------------------------------------ */
-/*  GET  /blogs  – return all posts                                    */
-/* ------------------------------------------------------------------ */
-app.get('/blogs', async (req, res) => {
+// ────────────────────────────────────────────────────────────
+//  GET  /api/server/blogs          → all posts
+//  GET  /api/server/blogs/:id      → single post
+// ────────────────────────────────────────────────────────────
+app.get('/api/server/blogs', async (_req, res) => {
   try {
-    const { data: posts, error } = await supabase
+    const { data, error } = await supabase
       .from('blogs')
       .select('*')
       .order('id', { ascending: true });
 
     if (error) throw error;
-    return res.status(200).json(posts);
+    res.status(200).json(data);
   } catch (err) {
-    console.error('Error fetching blogs:', err.message);
-    return res.status(500).json({ error: 'Internal Server Error' });
+    console.error('Fetch blogs error:', err.message);
+    res.status(500).json({ error: 'Internal Server Error' });
   }
 });
 
-/* ------------------------------------------------------------------ */
-/*  GET  /blogs/:id  – return a single post                            */
-/* ------------------------------------------------------------------ */
-app.get('/blogs/:id', async (req, res) => {
+app.get('/api/server/blogs/:id', async (req, res) => {
   const { id } = req.params;
 
   try {
-    const { data: posts, error } = await supabase
+    const { data, error } = await supabase
       .from('blogs')
       .select('*')
       .eq('id', id)
       .limit(1);
 
     if (error) throw error;
-    if (!posts || posts.length === 0) {
+    if (!data || data.length === 0) {
       return res.status(404).json({ error: 'Post not found' });
     }
-    return res.status(200).json(posts[0]);
+    res.status(200).json(data[0]);
   } catch (err) {
-    console.error(`Error fetching blog ${id}:`, err.message);
-    return res.status(500).json({ error: 'Internal Server Error' });
+    console.error(`Fetch blog ${id} error:`, err.message);
+    res.status(500).json({ error: 'Internal Server Error' });
   }
 });
 
-/* ------------------------------------------------------------------ */
-/*  POST /blogs  – (placeholder for future authenticated writes)       */
-/* ------------------------------------------------------------------ */
-// app.post('/blogs', async (req, res) => {
-//   const { title, date, author, content } = req.body;
-//   try {
-//     const { error } = await supabase
-//       .from('blogs')
-//       .insert([{ title, date, author, content }]);
-//     if (error) throw error;
-//     return res.status(201).json({ message: 'Post created' });
-//   } catch (err) {
-//     console.error('Error creating blog:', err.message);
-//     return res.status(500).json({ error: 'Internal Server Error' });
-//   }
-// });
+// ────────────────────────────────────────────────────────────
+//  Fallback 404 for anything else
+// ────────────────────────────────────────────────────────────
+app.use((_req, res) => res.status(404).json({ error: 'Not Found' }));
 
-/* ------------------------------------------------------------------ */
-/*  Catch-all for undefined routes                                    */
-/* ------------------------------------------------------------------ */
-app.use((req, res) => res.status(404).json({ error: 'Not Found' }));
-
-/* ------------------------------------------------------------------ */
-module.exports = app;   // Important: no app.listen() on Vercel
+module.exports = app;                // important: no app.listen()
