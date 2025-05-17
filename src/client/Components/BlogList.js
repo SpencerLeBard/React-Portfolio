@@ -24,17 +24,21 @@ const BlogList = () => {
   if (error)   return <p>{error}</p>;
 
   return (
-    <div className="blog-list">
-      <h1>Blog Posts</h1>
-      <ul>
-        {blogs.map(blog => (
-          <li key={blog.id}>
-            <Link to={`/blogs/${blog.id}`}>
-              {blog.title}
-            </Link>
-          </li>
-        ))}
-      </ul>
+    <div className="container mx-auto p-4 flex flex-col items-center">
+      {blogs.map(blog => (
+        <Link
+          key={blog.id}
+          to={`/blogs/${blog.id}`}
+          className="w-full max-w-2xl mb-6 no-underline"
+        >
+          <div className="bg-white shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform flex flex-col justify-between h-full cursor-pointer">
+            <div className="p-6 flex-grow">
+              <h3 className="text-4xl font-bold text-black tracking-wide">{blog.title}</h3>
+              {blog.snippet && <p className="mt-2 text-gray-600">{blog.snippet}</p>}
+            </div>
+          </div>
+        </Link>
+      ))}
     </div>
   );
 };
