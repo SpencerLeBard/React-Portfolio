@@ -20,7 +20,7 @@ app.use(express.json());
 //  Initialize Supabase client (read-only for blogs)
 // ────────────────────────────────────────────────────────────
 const supabase = createClient(
-  process.env.SUPABASE_URL,        // set in Vercel → Environment Variables
+  process.env.SUPABASE_URL,       
   process.env.SUPABASE_ANON_KEY
 );
 

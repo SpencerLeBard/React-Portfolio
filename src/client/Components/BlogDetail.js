@@ -29,7 +29,7 @@ const BlogDetail = () => {
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 py-10 px-2 relative">
       <Link
         to="/Blogs"
-        className="fixed top-6 left-6 z-50 text-black hover:text-gray-700 transition-colors"
+        className="fixed top-2 left-2 sm:top-6 sm:left-6 z-50 text-black hover:text-gray-700 transition-colors"
         aria-label="Back to Blogs"
       >
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-10 h-10">
